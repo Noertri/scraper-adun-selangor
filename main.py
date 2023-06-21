@@ -74,7 +74,7 @@ def scraper(response: httpx.Response):
                         result.phone = _phone.group(1)
 
                     if (_faks := fax_pattern.match(txt)):
-                        result.phone = _faks.group(1)
+                        result.fax = _faks.group(1)
 
                     if (_email := email_pattern.match(txt)):
                         result.email = _email.group(1)
